@@ -1,3 +1,5 @@
+Hosted Web App Link :- https://github-user-search-heroku.herokuapp.com/
+
 # GitHubUserSearch
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8.
