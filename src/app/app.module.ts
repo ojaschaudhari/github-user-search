@@ -10,6 +10,7 @@ import { ProfileCardComponent } from './profile-card/profile-card.component';
 import { FormsModule } from '@angular/forms';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     NgbModule,
     FormsModule,
     NgxSkeletonLoaderModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
