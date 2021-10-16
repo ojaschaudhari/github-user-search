@@ -1,0 +1,32 @@
+<div class="container-fluid px-3 py-3 backColor text-white">
+    <div class="row gx-5">
+
+        <div class="col-6 py-3" *ngFor="let repo of gitProfileRepos | 
+                paginate: { itemsPerPage: 10, currentPage: p, totalItems: len }">
+            <div class="card cardBack">
+                <div class="card-body">
+
+                    <ngx-skeleton-loader *ngIf="display" count="3" appearance="line">
+                    </ngx-skeleton-loader>
+                    <h5 class="card-title">
+                        <a href="repo"> {{repo.name}} </a>
+                    </h5>
+
+                    <p class="card-text desc mtb-3"> {{repo.description}}</p>
+
+                    <span *ngFor="let topic of repo.topics">
+                        <span class="topic bg-primary">{{topic}}</span>
+                    </span>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mx-auto">
+            <ngx-skeleton-loader *ngIf="display" count="1" appearance="line">
+            </ngx-skeleton-loader>
+            <pagination-controls (pageChange)="p = $event" maxSize:boolean=10></pagination-controls>
+        </div>
+    </div>
+</div>

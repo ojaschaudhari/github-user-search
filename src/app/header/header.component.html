@@ -1,0 +1,36 @@
+<!-- NAVBAR -->
+<h1>car</h1>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 mb-5">
+
+    <div class="container-fluid">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- HOME -->
+
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        <span class="homeFont home">Home</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- SEARCH -->
+
+        <input ngModel [(ngModel)]="user" class="form-control size" type="search" placeholder="Search"
+            aria-label="Search">
+
+        <button class="btn btn-outline-light mx-4 search" (click)="searchUser()" type="submit">Search</button>
+
+    </div>
+
+</nav>
+
+<app-profile-card [gitProfileCard]="gitProfile" [display]="content"></app-profile-card>
+<app-repo [gitProfileRepos]="gitProfileRepos" [display]="content"></app-repo>

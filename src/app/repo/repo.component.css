@@ -1,0 +1,33 @@
+:host {
+    width: 100vw;
+    height: 100vh;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    background-color: black;
+    height: 200px;
+}
+
+.backColor {
+    background-color: #121212;
+}
+
+.cardBack {
+    background-color: #222;
+    height: 200px;
+}
+
+.desc {
+    color: #999;
+}
+
+.topic {
+    font-size: 16;
+    font-weight: bolder;
+    padding: 8px 10px 8px 10px;
+    margin: 5px;
+}
