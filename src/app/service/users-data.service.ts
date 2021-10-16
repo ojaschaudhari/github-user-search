@@ -26,13 +26,6 @@ export class UsersDataService {
     )
   }
 
-  getLanguages(lang: string): Observable<any> {
-    return this.http.get<any>(lang).pipe(
-      retry(2),
-      catchError(this.handleError)
-    )
-  }
-
   handleError(err: HttpErrorResponse) {
     let errMsg: string
     if (err.error instanceof ErrorEvent) {
